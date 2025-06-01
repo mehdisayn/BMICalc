@@ -1,0 +1,17 @@
+we need:
+weight in kg
+height in m
+
+formula:
+BMI = weight(kg)/(height(m))**2
+
+features:
+it can convert inch to metre
+1 inch = 0.0254 m
+
+// for power -> Math.pow(height, 2)
+
+sb:
+txtF W
+txtF H
+txtF H in inchs
