@@ -1,6 +1,8 @@
 package selfprojects.bmicalc;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -12,6 +14,12 @@ public class BMICalcController
     private TextField weightTextField;
     @javafx.fxml.FXML
     private Label resultLabel;
+    @javafx.fxml.FXML
+    private Label feetResultLabel;
+    @javafx.fxml.FXML
+    private TextField feetTextField;
+    @javafx.fxml.FXML
+    private Button getButton;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -32,4 +40,20 @@ public class BMICalcController
         resultLabel.setText(" Your BMI: " + sumStr);
 
     }
+
+    @Deprecated
+    public void getButtonClick(ActionEvent actionEvent) {
+        String feetStr = feetTextField.getText();
+        double feetVal = Double.parseDouble(feetStr);
+        double feetSum = feetVal * 0.3048;
+        String feetSumStr = Double.toString(feetSum);
+        feetResultLabel.setText(feetSumStr);
+        getButton.setText("Copy");
+
+    }
+
+    @javafx.fxml.FXML
+    public void enterKeyPress(Event event) {
+    }
+
 }

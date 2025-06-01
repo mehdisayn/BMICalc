@@ -7,7 +7,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="selfprojects.bmicalc.BMICalcController">
    <children>
       <Label layoutX="27.0" layoutY="29.0" style="-fx-border-color: Black;" text="BMI Calc" underline="true">
@@ -29,7 +28,7 @@
       <TextField fx:id="heightTextField" layoutX="100.0" layoutY="173.0" promptText="i. e 1.76 M" />
       <Text layoutX="258.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="kg" />
       <Text layoutX="258.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="m" />
-      <Label fx:id="resultLabel" layoutX="334.0" layoutY="116.0" prefHeight="33.0" prefWidth="211.0" style="-fx-border-color: black;" text=" Your BMI: ">
+      <Label fx:id="resultLabel" layoutX="334.0" layoutY="116.0" prefHeight="33.0" prefWidth="211.0" style="-fx-border-color: black;" text=" Your BMI: " textFill="RED">
          <font>
             <Font name="MS UI Gothic" size="18.0" />
          </font>
@@ -40,5 +39,9 @@
          </font>
       </Text>
       <Button layoutX="420.0" layoutY="173.0" mnemonicParsing="false" onAction="#findButtonOnClick" text="Find" />
+      <Text layoutX="27.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you don't know your height in meter you can convert it from feet below  " />
+      <TextField fx:id="feetTextField" layoutX="25.0" layoutY="267.0" onKeyPressed="#enterKeyPress" promptText="Your height in feet" />
+      <Label fx:id="feetResultLabel" layoutX="196.0" layoutY="268.0" prefHeight="25.0" prefWidth="150.0" style="-fx-border-color: black;" text=" Your height in Meter" textFill="RED" />
+      <Button fx:id="getButton" layoutX="350.0" layoutY="268.0" mnemonicParsing="false" onAction="#getButtonClick" text="Get" />
    </children>
 </AnchorPane>
