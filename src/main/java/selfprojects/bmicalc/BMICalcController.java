@@ -50,6 +50,7 @@ public class BMICalcController
         feetResultLabel.setText(feetSumStr);
         getButton.setText("Copy");
 
+
     }
 
     @javafx.fxml.FXML
